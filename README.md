@@ -40,14 +40,26 @@ _To use this module, add the following call to your code:_
 _Example with_ **_launch\_tamplate_**
 
 ```tf
+
 module "autoscaling_group" {
   source = "git::https://github.com/nitinda/terraform-module-aws-route53-zone.git?ref=master"
 
   providers = {
     aws = aws.services
   }
-
+  
+  name          = "nitin.test"
+  comment       = "Why we need this"
+  force_destroy = true
+  tags          = merge(
+      var.common_tags,
+      {
+          "Name"      = "nitin-route53",
+          "ManagedBy" = "Terraform"
+      },
+  )
 }
+
 
 ```
 
