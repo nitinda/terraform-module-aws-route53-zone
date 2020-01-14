@@ -37,7 +37,28 @@ _Below we are able to check the resources that are being created as part of this
 
 _To use this module, add the following call to your code:_
 
-_Example with_ **_launch\_tamplate_**
+_Example for_ **_Public Route53 Domain_**
+
+```tf
+
+
+module "autoscaling_group" {
+  source = "git::https://github.com/nitinda/terraform-module-aws-route53-zone.git?ref=master"
+
+  providers = {
+    aws = aws.services
+  }
+  
+  name          = "example.test.org"
+  comment       = "Route53 Zone"
+  force_destroy = true
+  tags          = var.tags
+}
+
+
+```
+
+_Example for_ **_Privte Route53 Domain_**
 
 ```tf
 
@@ -48,21 +69,18 @@ module "autoscaling_group" {
     aws = aws.services
   }
   
-  name          = "nitin.test"
-  comment       = "Why we need this"
+  name          = "example.test.org"
+  comment       = "Route53 Zone"
   force_destroy = true
-  tags          = merge(
-      var.common_tags,
-      {
-          "Name"      = "nitin-route53",
-          "ManagedBy" = "Terraform"
-      },
-  )
+  tags          = var.tags
+  vpc           = {
+      vpc_id     = var.vpc_id
+      vpc_region = var.region
+  }
 }
 
 
 ```
-
 
 
 ---
