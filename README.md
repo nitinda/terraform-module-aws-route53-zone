@@ -3,7 +3,7 @@
 
 ## General
 
-This module may be used to create **_Route53 Zone_** resources in AWS cloud provider..
+_This module may be used to create_ **_Route53 Zone_** _resources in AWS cloud provider......_
 
 
 
@@ -12,10 +12,10 @@ This module may be used to create **_Route53 Zone_** resources in AWS cloud prov
 
 ## Prerequisites
 
-This module needs **_Terraform 0.12.19_** or newer.
-You can download the latest Terraform version from [here](https://www.terraform.io/downloads.html).
+_This module needs_ **_Terraform 0.12.19_** _or newer._
+_You can download the latest Terraform version from_ [here](https://www.terraform.io/downloads.html).
 
-This module deploys aws services details are in respective feature branches.
+_This module deploys aws services details are in respective feature branches._
 
 
 
@@ -24,7 +24,7 @@ This module deploys aws services details are in respective feature branches.
 
 ## Features Branches
 
-Below we are able to check the resources that are being created as part of this module call:
+_Below we are able to check the resources that are being created as part of this module call:_
 
 * **_Route53 Zone_**
 
@@ -35,7 +35,7 @@ Below we are able to check the resources that are being created as part of this 
 
 ## Using this repo
 
-To use this module, add the following call to your code:
+_To use this module, add the following call to your code:_
 
 _Example with_ **_launch\_tamplate_**
 
@@ -57,7 +57,7 @@ module "autoscaling_group" {
 
 ## Inputs
 
-The variables required in order for the module to be successfully called from the deployment repository are the following:
+_The variables required in order for the module to be successfully called from the deployment repository are the following:_
 
 
 |**_Variable_** | **_Description_** | **_Type_** | **_Argument Status_** |
@@ -76,13 +76,14 @@ The variables required in order for the module to be successfully called from th
 
 
 ### Usage
-In order for the variables to be accessed on module level please use the syntax below:
+
+_In order for the variables to be accessed on module level please use the syntax below:_
 
 ```tf
 module.<module_name>.<output_variable_name>
 ```
 
-- The output variable is able to be accessed through terraform state file using the syntax below:
+_The output variable is able to be accessed through terraform state file using the syntax below:_
 
 ```tf
 data.terraform_remote_state.<module_name>.<output_variable_name>
@@ -91,4 +92,4 @@ data.terraform_remote_state.<module_name>.<output_variable_name>
 
 
 ## Authors
-Module maintained by Module maintained by the - **_Nitin Das_**
+_Module maintained by Module maintained by the -_ **_Nitin Das_**
