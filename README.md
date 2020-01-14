@@ -13,7 +13,7 @@ _This module may be used to create_ **_Route53 Zone_** _resources in AWS cloud p
 ## Prerequisites
 
 _This module needs_ **_Terraform 0.12.19_** _or newer._
-_You can download the latest Terraform version from_ [here](https://www.terraform.io/downloads.html).
+_You can download the latest Terraform version from_ [_here_](https://www.terraform.io/downloads.html).
 
 _This module deploys aws services details are in respective feature branches._
 
