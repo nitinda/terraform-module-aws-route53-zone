@@ -92,7 +92,11 @@ _The variables required in order for the module to be successfully called from t
 
 |**_Variable_** | **_Description_** | **_Type_** | **_Argument Status_** |
 |:----|:----|-----:|-----:|
-| **_name\_prefix_** | Creates a unique name | _string_ | **_Required_** |
+| **_name_** | _This is the name of the hosted zone_ | _string_ | **_Required_** |
+| **_comment_** | _A comment for the hosted zone_ | _string_ | **_Required_** |
+| **_force\_destroy_** | _Whether to destroy all records_ | _bool_ | **_Optional (Default - false)_** |
+| **_tags_** | _A mapping of tags to assign to the zone_ | _map(string)_ | **_Required_** |
+| **_vpc_** | _Configuration block(s) specifying VPC(s)_ | _any_ | **_Required_** |
 
 
 
