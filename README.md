@@ -1,4 +1,4 @@
-# Terraform Module Name: terraform-module-aws-route53-zone
+# Terraform Module : terraform-module-aws-route53-zone
 
 
 ## General
